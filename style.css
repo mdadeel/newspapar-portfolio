@@ -254,62 +254,44 @@ body.dark-mode .social-icons-container a {
     color: #f0f0f0;
 }
 
-/* Dark Mode Toggle */
-.dark-mode-toggle {
+/* Theme Toggle Button */
+.theme-toggle-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dark-mode-toggle .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.dark-mode-toggle .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.dark-mode-toggle .slider {
-    position: absolute;
+.theme-toggle-btn {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 8px 12px;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark-mode-toggle .slider:before {
-    position: absolute;
-    content: "\f185"; /* Font Awesome sun icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    color: #f9d71c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: .4s;
+.theme-toggle-btn:hover {
+    background-color: #555;
 }
 
-.dark-mode-toggle input:checked + .slider {
-    background-color: #2c3e50;
+.theme-toggle-btn .dark-icon {
+    display: none;
 }
 
-.dark-mode-toggle input:checked + .slider:before {
-    transform: translateX(26px);
-    content: "\f186"; /* Font Awesome moon icon */
-    color: #f1c40f;
+body.dark-mode .theme-toggle-btn .light-icon {
+    display: none;
 }
+
+body.dark-mode .theme-toggle-btn .dark-icon {
+    display: inline-block;
+}
+
+body.dark-mode .theme-toggle-btn {
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    border-color: #f0f0f0;
+}
+
